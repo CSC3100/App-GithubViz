@@ -4,7 +4,7 @@
 It enables users to analyze and display data extracted from GitHub repositories, providing an intuitive visualization of project components, their dependencies, and health indicators.
 
 
-## 🧩 Overview
+## Overview
 
 GitHubViz represents source code components (classes, packages, or modules) as **interactive squares** in a grid layout.  
 Each square encodes information such as:
@@ -17,7 +17,7 @@ Each square encodes information such as:
 The system was designed as a teaching and research tool for software design visualization, software quality analysis, and architecture comprehension.
 
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows an MVC-inspired design pattern, consisting of the following components:
 
@@ -31,7 +31,7 @@ The project follows an MVC-inspired design pattern, consisting of the following 
 | **TheNanny.java** | Supervises periodic updates and validation, ensuring data consistency and coordinating visualization refresh cycles. |
 
 
-## 🧠 Features
+## Features
 
 - **Interactive Visualization:**  
   Displays code metrics in a grid layout with mouse-over details.
@@ -50,18 +50,3 @@ The project follows an MVC-inspired design pattern, consisting of the following 
 
 - **Automated Refresh (via TheNanny):**  
   Periodic UI updates ensure metrics remain synchronized with the underlying data model.
-
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Java 17 or later  
-- Maven or any preferred Java build tool  
-- (Optional) GitHub API integration for live repository metrics
-
-### Running the Application
-
-Compile and execute directly:
-```bash
-javac *.java
-java Main
