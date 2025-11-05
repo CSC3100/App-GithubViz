@@ -20,7 +20,7 @@ public class Delegate implements Runnable {
 	public void run() {
 		Blackboard.getInstance().clear();
 		try {
-			String token = "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";
+			String token = "GITHUB_TOKEN";
 			GitHubHandler gh = new GitHubHandler(token);
 			List<String> allFromUrl = gh.listFilesRecursive(url);
 			for (String path : allFromUrl) {
