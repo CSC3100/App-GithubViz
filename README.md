@@ -23,6 +23,11 @@ GitHubViz was created as a teaching and research tool to help students and devel
 
 It provides a foundation for hands-on work in software analysis, design visualization, and architecture comprehension.
 
+## Screenshot
+
+<img width="912" height="712" alt="Screenshot 2025-11-28 at 3 50 49 PM" src="https://github.com/user-attachments/assets/4c6f310f-b1a9-4cfc-81d2-4efa8e980d57" />
+
+
 ## Overview
 
 GitHubViz represents source code entities (classes, packages, or modules) as **interactive squares** arranged in a grid.  
