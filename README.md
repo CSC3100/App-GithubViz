@@ -1,52 +1,101 @@
 # GitHubViz
 
-**GitHubViz** is a Java Swing desktop application that visualizes software quality metrics and code structure using an interactive grid-based interface.  
-It enables users to analyze and display data extracted from GitHub repositories, providing an intuitive visualization of project components, their dependencies, and health indicators.
+![License](https://img.shields.io/badge/license-MIT-green)
+![Java](https://img.shields.io/badge/Java-17+-blue)
+![Platform](https://img.shields.io/badge/platform-Java_Swing-orange)
+![Status](https://img.shields.io/badge/status-Template_Project-yellow)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
+**GitHubViz** is a Java Swing desktop application that visualizes software quality metrics and code structure using an interactive grid-based interface.  
+It enables users to analyze and display data extracted from GitHub repositories, offering an intuitive representation of project components, dependencies, and key software engineering indicators.
+
+> **Note:**  
+> This repository serves as a **starter template for a class project**. Students are expected to extend, refactor, and enhance its features as part of the course.
+
+## Purpose
+
+GitHubViz was created as a teaching and research tool to help students and developers:
+
+- Understand software architecture through visual representations  
+- Explore coupling, cohesion, abstractness, instability, and related metrics  
+- Experiment with different visualization techniques  
+- Practice applying design patterns and improving existing software artifacts  
+- Learn by doing: refactor, extend, and improve an existing codebase  
+
+It provides a foundation for hands-on work in software analysis, design visualization, and architecture comprehension.
 
 ## Overview
 
-GitHubViz represents source code components (classes, packages, or modules) as **interactive squares** in a grid layout.  
+GitHubViz represents source code entities (classes, packages, or modules) as **interactive squares** arranged in a grid.  
 Each square encodes information such as:
 
 - Dependency relationships  
-- Coupling and cohesion metrics  
+- Coupling/cohesion levels  
 - Abstractness and instability indices  
-- Code ownership or responsibility annotations  
+- Code ownership annotations  
+- Custom metrics added by students during development  
 
-The system was designed as a teaching and research tool for software design visualization, software quality analysis, and architecture comprehension.
-
+The system is intentionally modular, making it easy to adapt for new visualizations or metrics.
 
 ## Architecture
 
-The project follows an MVC-inspired design pattern, consisting of the following components:
+The project follows an MVC-inspired structure with clear separation of concerns:
 
 | Class | Role |
 |-------|------|
-| **Main.java** | Entry point of the application. Initializes the UI and sets up event listeners and delegates. |
-| **GridPanel.java** | Core visualization component that renders the grid of software components using `Square` objects. |
-| **Square.java** | Represents a single visual unit in the grid — a module, class, or component — containing data and drawing logic. |
-| **Delegate.java** | Manages communication between UI components and backend logic (e.g., user interactions and visual updates). |
-| **Blackboard.java** | Central shared data structure for storing analysis results and visual configuration. |
-| **TheNanny.java** | Supervises periodic updates and validation, ensuring data consistency and coordinating visualization refresh cycles. |
-
+| **Main.java** | Application entry point. Initializes UI components, event listeners, and delegates. |
+| **GridPanel.java** | Core visualization component that renders the grid using `Square` objects. |
+| **Square.java** | Represents a single grid unit — a class/module/component — containing drawing logic and metric data. |
+| **Delegate.java** | Mediates communication between UI elements and backend logic (input handling, updates, etc.). |
+| **Blackboard.java** | Central shared data store for metrics, configuration, and visualization parameters. |
+| **TheNanny.java** | Oversees periodic updates and validation, ensuring consistent data flow and triggering UI refresh cycles. |
 
 ## Features
 
-- **Interactive Visualization:**  
-  Displays code metrics in a grid layout with mouse-over details.
+- **Interactive Visualization**  
+  Grid-based representation with mouse-over details.
 
-- **Metric-Based Coloring:**  
-  Squares change color based on coupling, stability, or other configurable attributes.
+- **Metric-Based Coloring**  
+  Squares adapt their color based on coupling, stability, or custom attributes.
 
-- **Dependency Awareness:**  
-  Visual links or adjacency patterns represent class or package dependencies.
+- **Dependency Awareness**  
+  Patterns or adjacency visualize class/package relationships.
 
-- **Observer/Delegate Pattern:**  
-  Uses delegation to decouple visualization and control logic.
+- **Delegate + Observer Pattern**  
+  Clear decoupling between user interaction, logic, and UI.
 
-- **Extendable Blackboard System:**  
-  Centralized storage for sharing metrics or visualization parameters across components.
+- **Blackboard System**  
+  A flexible structure for sharing metrics and state.
 
-- **Automated Refresh (via TheNanny):**  
-  Periodic UI updates ensure metrics remain synchronized with the underlying data model.
+- **Automated Refresh (TheNanny)**  
+  Keeps the visualization updated with the underlying model.
+
+- **Designed for Extension**  
+  Students can add metrics, layouts, API integration, and more.
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/CSC3100/App-GitHubViz.git
+```
+
+Compile and run:
+
+```bash
+javac Main.java
+java Main
+```
+
+## For Students
+
+This project is intentionally minimalistic. Expected improvements include:
+
+- Integrating GitHub APIs  
+- Adding new metrics and visual indicators  
+- Enhancing the UI  
+- Refactoring for clarity and maintainability  
+- Improving documentation and examples  
+
+Treat this repository as a **starting point**, not a finished product.
