@@ -1,8 +1,8 @@
 ![Static Badge](https://img.shields.io/badge/author-javiergs-orange)
 ![GitHub repo size](https://img.shields.io/github/repo-size/CSC3100/App-GithubViz)
-
 ![Java](https://img.shields.io/badge/Java-17+-blue)
 ![Platform](https://img.shields.io/badge/platform-Java_Swing-orange)
+
 ![Status](https://img.shields.io/badge/status-Template_Project-yellow)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
