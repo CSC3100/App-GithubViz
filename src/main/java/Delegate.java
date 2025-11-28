@@ -1,6 +1,9 @@
 import javiergs.tulip.GitHubHandler;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * Delegate class to load Java files from a GitHub repository URL.
@@ -20,7 +23,7 @@ public class Delegate implements Runnable {
 	public void run() {
 		Blackboard.getInstance().clear();
 		try {
-			String token = "GITHUB_TOKEN";
+			String token = loadTokenFromConfigFile();
 			GitHubHandler gh = new GitHubHandler(token);
 			List<String> allFromUrl = gh.listFilesRecursive(url);
 			for (String path : allFromUrl) {
@@ -37,6 +40,17 @@ public class Delegate implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private String loadTokenFromConfigFile() throws IOException {
+		Properties props = new Properties();
+		try (InputStream in = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+			if (in != null) {
+				props.load(in);
+			}
+		}
+		System.out.println(props.getProperty("github.token"));
+		return props.getProperty("github.token");
 	}
 	
 	private int countLines(String content) {

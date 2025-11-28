@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * TheNanny class to handle the action of loading a URL from the text field.
+ * Handle the action of loading a URL from the text field.
  *
  * @author javiergs
  * @version 1.0

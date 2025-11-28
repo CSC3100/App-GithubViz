@@ -29,7 +29,7 @@ public class Blackboard extends PropertyChangeSupport {
 	
 	public void loadFromUrl(String url) {
 		try {
-			Delegate delegate = new Delegate(url);
+			DelegateMetrics delegate = new DelegateMetrics(url);
 			Thread t = new Thread(delegate);
 			t.start();
 		} catch (Exception e) {
@@ -60,5 +60,4 @@ public class Blackboard extends PropertyChangeSupport {
 		ready = false;
 		loading = false;
 	}
-	
 }

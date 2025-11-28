@@ -75,9 +75,25 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
 	}
 	
 	private Color calculateColor(int lines) {
-		if (lines < 50) return new Color(180, 240, 180);
-		else if (lines < 200) return new Color(255, 245, 150);
-		else return new Color(240, 140, 140);
+		if (lines < 10) {
+			// Very low coupling — light green
+			return new Color(180, 240, 180);
+		} else if (lines < 30) {
+			// Low coupling — mint green
+			return new Color(200, 255, 200);
+		} else if (lines < 60) {
+			// Moderate coupling — yellowish
+			return new Color(255, 255, 180);
+		} else if (lines < 100) {
+			// Noticeable coupling — orange-yellow
+			return new Color(255, 220, 130);
+		} else if (lines < 200) {
+			// High coupling — orange-red
+			return new Color(255, 170, 100);
+		} else {
+			// Very high coupling — red
+			return new Color(240, 100, 100);
+		}
 	}
 	
 }
