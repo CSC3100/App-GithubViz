@@ -6,8 +6,7 @@
 ![Status](https://img.shields.io/badge/status-Template_Project-yellow)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
-**GitHubViz** is a Java Swing desktop application that visualizes software quality metrics and code structure using an interactive grid-based interface.  
-It enables users to analyze and display data extracted from GitHub repositories, offering an intuitive representation of project components, dependencies, and key software engineering indicators.
+**GitHubViz** is a Java Swing desktop application that visualizes software quality metrics and code structure using an interactive grid-based interface. It enables users to analyze and display data extracted from GitHub repositories, offering an intuitive representation of project components, dependencies, and key software engineering indicators.
 
 > **Note:**  
 > This repository serves as a **starter template for a class project**. Students are expected to extend, refactor, and enhance its features as part of the course.
@@ -49,29 +48,6 @@ The project follows an MVC-inspired structure with clear separation of concerns:
 | **Delegate.java** | Mediates communication between UI elements and backend logic (input handling, updates, etc.). |
 | **Blackboard.java** | Central shared data store for metrics, configuration, and visualization parameters. |
 | **TheNanny.java** | Oversees periodic updates and validation, ensuring consistent data flow and triggering UI refresh cycles. |
-
-## Features
-
-- **Interactive Visualization**  
-  Grid-based representation with mouse-over details.
-
-- **Metric-Based Coloring**  
-  Squares adapt their color based on coupling, stability, or custom attributes.
-
-- **Dependency Awareness**  
-  Patterns or adjacency visualize class/package relationships.
-
-- **Delegate + Observer Pattern**  
-  Clear decoupling between user interaction, logic, and UI.
-
-- **Blackboard System**  
-  A flexible structure for sharing metrics and state.
-
-- **Automated Refresh (TheNanny)**  
-  Keeps the visualization updated with the underlying model.
-
-- **Designed for Extension**  
-  Students can add metrics, layouts, API integration, and more.
 
 ## Getting Started
 
