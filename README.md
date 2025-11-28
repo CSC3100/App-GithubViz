@@ -25,6 +25,15 @@ It provides a foundation for hands-on work in software analysis, design visualiz
 
 ## Screenshot
 
+The screenshot shows GitHubViz running with a full visualization of a GitHub repository (https://github.com/javiegs/ADASIM). Each square in the grid represents a source file from the repository. The grid layout provides an at-a-glance overview of the project’s structure, where:
+- Color intensity would reflect software metrics (e.g., size, complexity, instability, or custom values).
+- Green tones indicate lighter or simpler components.
+- Yellow/orange tones highlight files with higher complexity or central roles.
+- Red tones reveal potential hotspots or heavy modules that may need attention.
+- Each square is labeled with the file name and an associated metric value.
+
+At the top, the interface displays the URL input field used to load a GitHub repository and a simple “OK” button to trigger visualization.
+
 <img width="912" height="712" alt="Screenshot 2025-11-28 at 3 50 49 PM" src="https://github.com/user-attachments/assets/4c6f310f-b1a9-4cfc-81d2-4efa8e980d57" />
 
 
